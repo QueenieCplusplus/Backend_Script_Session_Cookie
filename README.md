@@ -82,3 +82,9 @@ Session 如同 cookie 能存放陣列，陣列通常是 DB 的取出物件，是
    
    // 單純地秀出商品的編號、品名、照片、金額，邏輯與紀錄 session 無關。
    
+
+#SID 
+
+同一台電腦，倘若分成 safari、chrome、IE 三種瀏覽器登入同一網站，cookie 是不同的！但是同一瀏覽器，不同分頁，則是同一 cookie。
+
+https://bbs.csdn.net/topics/300114707 
