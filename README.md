@@ -44,4 +44,15 @@ Session 如同 cookie 能存放陣列，陣列通常是 DB 的取出物件，是
       }
     
     }
-                 
+  
+  ....
+  
+   // 倘若使用者按下了淨空資料，則 ... 金額與數量歸零。
+   
+    <a id="btnEmpty" href="index.php?action=empty">Clean the Cart Record!</a>
+    <?php
+    if(isset($_SESSION["購物車品項"])){
+        $total_quantity = 0;
+        $total_price = 0;
+    ?>	
+   
