@@ -11,6 +11,7 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
      setcookie("name", "value", expire: int, path: string, domain: string, secure: bool)
      
      // 關於網域，伺服器可能同時擁有很多網域，為避免一網域存取另一網域 cookie，需要分開設定。
+     // 路徑為根目錄，識別檔案存放在用戶端的存放路徑。
 
 
 
