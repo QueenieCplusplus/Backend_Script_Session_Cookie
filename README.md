@@ -51,6 +51,16 @@ Session 在登入驗證的範例：
           $_SESSION["id"] = $id;
           $_SESSION["username"] = $username;                            
 
+Session 在密碼重設的應用：
+
+	session_start();
+
+	// Check if the user is logged in, otherwise redirect to login page
+	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+	    header("location: login.php");
+	    exit;
+	}
+
 
 Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列通常是 DB 的取出物件，是個二維陣列型態的資料。使用方式，可詳見同一母標題的後端腳本類別中的購物車範例：
 
