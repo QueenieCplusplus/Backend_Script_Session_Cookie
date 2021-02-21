@@ -20,7 +20,7 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
 Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列通常是 DB 的取出物件，是個二維陣列型態的資料。使用方式，可詳見同一母標題的後端腳本類別中的購物車範例：
 
 
-    session_start();
+    session_start(); // 通知 php 要使用 session 功能，能幫助伺服器檢查用戶端瀏覽器記憶體或硬碟有無伺服器發送的 SID，如無，則建立一新的 SID，如有，則根據找到的 SID 回復所有變數的值。
     
     
     if(!empty($_GET["action"])) {
@@ -48,7 +48,7 @@ Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列�
             }
          break;
          case "c":
-            unset($_SESSION["購物車品項"]);
+            unset($_SESSION["購物車品項"]); // 釋放所有 session 變數。
          break;
       }
     
