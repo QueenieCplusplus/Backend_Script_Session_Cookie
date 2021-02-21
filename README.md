@@ -44,7 +44,12 @@ Session 在登入驗證的範例：
 	  header("location: welcome.php");
 	  exit;
 	}
-
+	
+	
+	 // Store data in session variables
+          $_SESSION["loggedin"] = true;
+          $_SESSION["id"] = $id;
+          $_SESSION["username"] = $username;                            
 
 
 Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列通常是 DB 的取出物件，是個二維陣列型態的資料。使用方式，可詳見同一母標題的後端腳本類別中的購物車範例：
