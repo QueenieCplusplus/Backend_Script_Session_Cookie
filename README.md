@@ -51,7 +51,7 @@ Session 在登入驗證的範例：
           $_SESSION["id"] = $id;
           $_SESSION["username"] = $username;                            
 
-Session 在密碼重設的應用：
+Session 在密碼重設或是申請會員的應用：
 
 	session_start();
 
