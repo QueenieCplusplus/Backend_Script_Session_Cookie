@@ -8,7 +8,11 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
 
 資安問題的話，用戶端為了避免個資外洩，通常會選擇拒絕寫入伺服器檔案至自己瀏覽器的記憶體和磁碟。至於開發者的設定方式如下：
 
-setcookie("name", "value", expire: int, path: string, domain: string, secure: bool)
+     setcookie("name", "value", expire: int, path: string, domain: string, secure: bool)
+     
+     // 關於網域，伺服器可能同時擁有很多網域，為避免一網域存取另一網域 cookie，需要分開設定。
+
+
 
 Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列通常是 DB 的取出物件，是個二維陣列型態的資料。使用方式，可詳見同一母標題的後端腳本類別中的購物車範例：
 
