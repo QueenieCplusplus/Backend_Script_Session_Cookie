@@ -14,6 +14,25 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
      // 如同食物有包鮮期限，cookie 也會因為開發者設定的秒數而自動消失。
      // 關於網域，伺服器可能同時擁有很多網域，為避免一網域存取另一網域 cookie，需要分開設定。
      // 路徑為根目錄，識別檔案存放在用戶端的存放路徑。
+     
+       setcookie("arrayName[0]", "Patty");
+       setcookie("arrayName[1]", "Kate");
+       setcookie("arrayName[2]", "Queen");
+       if(isset($_COOKIE['array_name']))
+          foreach($_COOKIE['array_name'] as $key=>$value)
+	     echo "$key: $vale <BR>";
+     
+     
+      運作方式等同 Session 變數 =>
+     
+      foreach($_SESSION["購物車品項"] as $key=>$value){
+                      if(某碼==$key){
+                      
+                         // if 多做一道驗證，例如數量為 0 則如下行數字為 0
+                         $_SESSION["購物車品項"][$key]["數量"] += $_POST["數量"]
+                      
+                      }
+                  }
 
 
 
