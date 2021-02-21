@@ -54,5 +54,10 @@ Session 如同 cookie 能存放陣列，陣列通常是 DB 的取出物件，是
     if(isset($_SESSION["購物車品項"])){
         $total_quantity = 0;
         $total_price = 0;
-    ?>	
+    ?>
+    else {
+    ?>
+    <div class="no-records">Your Cart is Empty</div>
+    <?php 
+    }
    
