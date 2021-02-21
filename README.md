@@ -25,7 +25,7 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
      
       運作方式等同 Session 變數 =>
      
-      foreach($_SESSION["購物車品項"] as $key=>$value){
+      foreach($_SESSION["購物車品項"] as $key=>$value){ // 使用迴圈顯示各個元素。
                       if(某碼==$key){
                       
                          // if 多做一道驗證，例如數量為 0 則如下行數字為 0
@@ -49,7 +49,7 @@ Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列�
          case "A": // switch 用於『多途決策』， if 用於查核驗證。
             if(!empty($_POST["數量"])){
                if(in_array(某碼, array_key($_SESSION["購物車品項"]))){
-                  foreach($_SESSION["購物車品項"] as $key=>$value){
+                  foreach($_SESSION["購物車品項"] as $key=>$value){ //使用迴圈顯示各個元素
                       if(某碼==$key){
                       
                          // if 多做一道驗證，例如數量為 0 則如下行數字為 0
