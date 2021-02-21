@@ -45,7 +45,7 @@ Session 如同 cookie 能存放陣列，陣列通常是 DB 的取出物件，是
     
     }
   
-  ....
+     ....
   
    // 倘若使用者按下了淨空資料，則 ... 金額與數量歸零。
    
@@ -61,4 +61,22 @@ Session 如同 cookie 能存放陣列，陣列通常是 DB 的取出物件，是
     <?php 
     }
     ?>
+    
+   // 倘若需要計算總數量與總金額，仍要與 Session 合作。
+   // 第一則函數為小計
+   // 第二則函數為總計
+   
+       <?php		
+        foreach ($_SESSION["購物車品項"] as $item){
+        
+            $item_price = $item["數量"]*$item["價格"];
+            
+            }
+        ?>
+				
+		<?php
+			$total_quantity += $item["數量"];
+			 $total_price += ($item["數量"]*$item["價格"]);
+		
+		?>
    
