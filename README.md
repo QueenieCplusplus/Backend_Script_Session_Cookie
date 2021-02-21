@@ -35,6 +35,17 @@ Session 其實就是 Cookie，但是不同於客戶端的 cookie，session 是�
                   }
 
 
+Session 在登入驗證的範例：
+
+	session_start();
+
+	// Check if the user is already logged in, if yes then redirect him to welcome page
+	if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+	  header("location: welcome.php");
+	  exit;
+	}
+
+
 
 Session 如同 cookie 作為全領變數能存放陣列型態的資料，陣列通常是 DB 的取出物件，是個二維陣列型態的資料。使用方式，可詳見同一母標題的後端腳本類別中的購物車範例：
 
